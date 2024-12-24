@@ -54,7 +54,6 @@ cells.forEach((cell, index) => {
 
             if (checkWin(currentPlayer)) {
                 alert(`${currentPlayer} wins!`);
-                resetGame(); // Reset the game
             } else if (checkDraw()) {
                 alert("It's a draw!");
             } else {
