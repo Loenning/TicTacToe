@@ -53,11 +53,12 @@ cells.forEach((cell, index) => {
             cell.textContent = currentPlayer;
 
             if (checkWin(currentPlayer)) {
-                alert(`${currentPlayer} wins!`);
+                document.getElementById("message").textContent=`${currentPlayer} wins!`
             } else if (checkDraw()) {
-                alert("It's a draw!");
+                document.getElementById("message").textContent=`It's a draw!`
             } else {
                 currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
+                document.getElementById("message").textContent=`${currentPlayer}'s turn`
             }
         }
     });
